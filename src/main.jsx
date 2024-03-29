@@ -12,6 +12,7 @@ import Contant from './Components/Contant/Contant';
 import Menu from './Components/Menu/Menu';
 import User from './Components/User/User';
 import Bookmarks from './Components/Bookmarks/Bookmarks';
+import BookLists from './Components/BookLists/BookLists';
 
 const router = createBrowserRouter([
   {
@@ -37,6 +38,10 @@ const router = createBrowserRouter([
       {
         path:'/bookmarks',
         element:<Bookmarks></Bookmarks>
+      },
+      {
+        path:'/booklists',
+        element:<BookLists></BookLists>
       }
     ],
   },
