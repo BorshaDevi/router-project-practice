@@ -1,11 +1,14 @@
+import { Link } from "react-router-dom";
 
 
 const Header = () => {
     return (
         <div>
-            <a href="/about">About</a>
-            <a href="/contant">Contant</a>
-            <a href="/menu">Menu</a>
+             <Link to='/about'> About</Link>
+             <Link to='/contant'>Contant</Link>
+             <Link to='/menu'>Menu</Link>
+             <Link to='/user'>User</Link>
+             <Link to='/bookmarks'>Bookmarks</Link>
         </div>
     );
 };

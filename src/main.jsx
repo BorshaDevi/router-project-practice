@@ -10,6 +10,8 @@ import Home from './Components/Home/Home';
 import About from './Components/About/About';
 import Contant from './Components/Contant/Contant';
 import Menu from './Components/Menu/Menu';
+import User from './Components/User/User';
+import Bookmarks from './Components/Bookmarks/Bookmarks';
 
 const router = createBrowserRouter([
   {
@@ -28,6 +30,14 @@ const router = createBrowserRouter([
         path:'/menu',
         element:<Menu></Menu>
       },
+      {
+        path:'/user',
+        element:<User></User>
+      },
+      {
+        path:'/bookmarks',
+        element:<Bookmarks></Bookmarks>
+      }
     ],
   },
 ]);
