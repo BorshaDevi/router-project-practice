@@ -1,4 +1,4 @@
-import { useLoaderData, useNavigate } from "react-router-dom";
+import { useLoaderData, useNavigate, useParams } from "react-router-dom";
 
 
 const ShowComments = () => {
@@ -8,6 +8,8 @@ const ShowComments = () => {
     const handleGoBack=()=>{
          navigate(-1)
     }
+    const {moreCommentId}=useParams();
+    console.log(moreCommentId)
     return (
         <div>
             <p>{id}</p>

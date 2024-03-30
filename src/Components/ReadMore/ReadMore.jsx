@@ -1,4 +1,4 @@
-import { useLoaderData, useNavigate } from "react-router-dom";
+import { useLoaderData, useNavigate, useParams } from "react-router-dom";
 
 const ReadMore = () => {
     const readmore=useLoaderData()
@@ -7,6 +7,8 @@ const ReadMore = () => {
     const handleGoBack=()=>{
        navigate(-1)
     }
+    const {readMoreId} =useParams();
+    console.log(readMoreId)
     return (
         <div>
             <h2>{id}</h2>

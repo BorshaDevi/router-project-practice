@@ -1,8 +1,9 @@
-import { Link } from "react-router-dom";
+import { Link, useParams } from "react-router-dom";
 
 const Allpost = ({allpost}) => {
    
     const {name,email,id}=allpost
+   
     return (
         <div>
             <p>{id}</p>
