@@ -13,6 +13,7 @@ import Menu from './Components/Menu/Menu';
 import User from './Components/User/User';
 import Bookmarks from './Components/Bookmarks/Bookmarks';
 import BookLists from './Components/BookLists/BookLists';
+import ShowDetails from './Components/ShowDetails/ShowDetails';
 
 const router = createBrowserRouter([
   {
@@ -25,15 +26,17 @@ const router = createBrowserRouter([
       },
       {
        path:'/contant',
-       element:<Contant></Contant>
+       loader:() =>fetch('https://jsonplaceholder.typicode.com/users'),   
+       element:<Contant></Contant>,
       },
       {
         path:'/menu',
-        element:<Menu></Menu>
+        element:<Menu></Menu>,
       },
       {
         path:'/user',
-        element:<User></User>
+        loader:() => fetch('https://jsonplaceholder.typicode.com/users'),
+        element:<User></User>,
       },
       {
         path:'/bookmarks',
@@ -42,6 +45,11 @@ const router = createBrowserRouter([
       {
         path:'/booklists',
         element:<BookLists></BookLists>
+      },
+      {
+        path:'/content/:contentId',
+        loader:({params}) => fetch(`https://jsonplaceholder.typicode.com/users/${params.contentId}`),
+        element:<ShowDetails></ShowDetails>,
       }
     ],
   },
