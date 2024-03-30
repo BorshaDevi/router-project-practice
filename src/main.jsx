@@ -21,11 +21,13 @@ import AboutPosts from './Components/AboutPosts/AboutPosts';
 import ReadMore from './Components/ReadMore/ReadMore';
 import Comments from './Components/Comments/Comments';
 import ShowComments from './Components/ShowComments/ShowComments';
+import Errorpage from './Components/Error/Errorpage';
 
 const router = createBrowserRouter([
   {
     path: "/",
     element: <Home></Home>,
+    errorElement:<Errorpage></Errorpage>,
     children:[
       {
          path:'/about',
