@@ -1,3 +1,4 @@
+import { Link } from "react-router-dom";
 
 
 const BookLists = () => {
@@ -8,6 +9,7 @@ const BookLists = () => {
             <li>math</li>
             <li>physics</li>
             <li>chemistry</li>
+            <Link to='/bookmore'>Show more</Link>
             </ul>
         </div>
     );
